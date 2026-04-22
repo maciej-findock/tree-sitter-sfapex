@@ -1,0 +1,6 @@
+# force some line endings
+apex/test/corpus/ending-sensitive-crlf.txt !eol
+apex/test/corpus/ending-sensitive-lf.txt !eol
+
+sflog/test/corpus/anonymous-crlf.txt !eol
+sflog/test/corpus/anonymous-lf.txt !eol

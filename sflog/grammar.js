@@ -24,7 +24,7 @@ module.exports = grammar({
         "APEX_PROFILING",
         "VISUALFORCE",
         "SYSTEM",
-        "WAVE"
+        "WAVE",
       ),
 
     log_level: ($) =>
@@ -36,14 +36,14 @@ module.exports = grammar({
         "DEBUG",
         "FINE",
         "FINER",
-        "FINEST"
+        "FINEST",
       ),
 
     anonymous_block: ($) => repeat1(seq($._anonymous_label, $.apex_code)),
 
     _anonymous_label: ($) => "Execute Anonymous:",
 
-    apex_code: ($) => /[^\n]+/,
+    apex_code: ($) => /[^\r\n]+/,
 
     log_entry: ($) =>
       seq(
@@ -54,9 +54,9 @@ module.exports = grammar({
           choice(
             seq(seq("|[", $.location, "]"), optional($.event_details)),
             seq("|(", $.namespace, ")|", $.limit_usage),
-            $.event_details
-          )
-        )
+            $.event_details,
+          ),
+        ),
       ),
 
     location: ($) => choice($.number, "EXTERNAL"),
@@ -68,7 +68,7 @@ module.exports = grammar({
         ":",
         field("consumed", $.number),
         "out of",
-        field("available", $.number)
+        field("available", $.number),
       ),
     event_details: ($) => repeat1($.event_detail),
     event_detail: ($) => seq("|", $.event_detail_value),
