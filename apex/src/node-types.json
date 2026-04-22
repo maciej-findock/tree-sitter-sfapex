@@ -16,6 +16,10 @@
         "named": true
       },
       {
+        "type": "multi_line_string_literal",
+        "named": true
+      },
+      {
         "type": "null_literal",
         "named": true
       },
@@ -2893,6 +2897,11 @@
     }
   },
   {
+    "type": "multi_line_string_literal",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "not_expression",
     "named": true,
     "fields": {},
@@ -4865,6 +4874,10 @@
   },
   {
     "type": "'",
+    "named": false
+  },
+  {
+    "type": "'''",
     "named": false
   },
   {

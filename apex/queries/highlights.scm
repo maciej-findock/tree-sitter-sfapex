@@ -233,6 +233,7 @@
 
 [
   (string_literal)
+  (multi_line_string_literal)
 ] @string
 
 [

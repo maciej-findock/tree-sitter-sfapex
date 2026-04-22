@@ -180,6 +180,20 @@ public class Me {
 //                      ^ operator
 //                        ^ number
 //                         ^ punctuation
+
+
+    String str = 'hello\'world';
+//  ^ type
+//          ^ variable
+//             ^ operator
+//                ^ string
+
+
+    String str2 = '''this is a multi-line string''';
+//  ^ type
+//          ^ variable
+//              ^ operator
+//                    ^ string
   }
 //^ punctuation
 }

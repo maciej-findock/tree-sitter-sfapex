@@ -9965,6 +9965,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "multi_line_string_literal"
+        },
+        {
+          "type": "SYMBOL",
           "name": "null_literal"
         }
       ]
@@ -10443,6 +10447,26 @@
           }
         ]
       }
+    },
+    "multi_line_string_literal": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "'''"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "PATTERN",
+            "value": "[^']''?[^']|\\\\'|[^']"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "'''"
+        }
+      ]
     }
   },
   "extras": [

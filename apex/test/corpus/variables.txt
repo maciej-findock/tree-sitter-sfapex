@@ -441,3 +441,98 @@ public class Me {
             (assignment_operator)
             (unary_expression
               (int))))))))
+
+================================================================================
+VARIABLE Multi-Line Simple
+================================================================================
+
+String str = '''simple''';
+--------------------------------------------------------------------------------
+
+(parser_output
+  (local_variable_declaration
+    (type_identifier)
+    (variable_declarator
+      (identifier)
+      (assignment_operator)
+      (multi_line_string_literal))))
+
+================================================================================
+VARIABLE Multi-Line HTML
+================================================================================
+
+String str = '''
+        <html>
+            <body>
+                <p>Hello, world</p>
+            </body>
+        </html>
+       ''';
+--------------------------------------------------------------------------------
+
+(parser_output
+  (local_variable_declaration
+    (type_identifier)
+    (variable_declarator
+      (identifier)
+      (assignment_operator)
+      (multi_line_string_literal))))
+
+================================================================================
+VARIABLE Multi-Line With Preserve Whitespace
+================================================================================
+
+String str = '''
+        <html>     \s
+            <body>
+                <p>Hello, world</p>
+            </body>
+        </html>     \s
+       ''';
+--------------------------------------------------------------------------------
+
+(parser_output
+  (local_variable_declaration
+    (type_identifier)
+    (variable_declarator
+      (identifier)
+      (assignment_operator)
+      (multi_line_string_literal))))
+
+================================================================================
+VARIABLE Multi-Line With Transparent Breaks
+================================================================================
+
+String str = '''
+    This is a string that doesn't fit on one line \
+    but I don't want it to contain newlines \
+    so I am using this escape sequence to \
+    prevent them from being inserted''';
+
+--------------------------------------------------------------------------------
+
+(parser_output
+  (local_variable_declaration
+    (type_identifier)
+    (variable_declarator
+      (identifier)
+      (assignment_operator)
+      (multi_line_string_literal))))
+
+================================================================================
+VARIABLE Multi-Line Embedded Single Quotes
+================================================================================
+
+String str = '''
+    I want a single quote here '
+    And also right before the string ends\'''';
+
+--------------------------------------------------------------------------------
+
+(parser_output
+  (local_variable_declaration
+    (type_identifier)
+    (variable_declarator
+      (identifier)
+      (assignment_operator)
+      (multi_line_string_literal))))
