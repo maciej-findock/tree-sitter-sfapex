@@ -25,7 +25,7 @@
 
 pub mod apex {
     use tree_sitter_language::LanguageFn;
-    extern "C" {
+    unsafe extern "C" {
         fn tree_sitter_apex() -> *const ();
     }
 
@@ -51,7 +51,7 @@ pub mod apex {
 
 pub mod soql {
     use tree_sitter_language::LanguageFn;
-    extern "C" {
+    unsafe extern "C" {
         fn tree_sitter_soql() -> *const ();
     }
 
@@ -77,7 +77,7 @@ pub mod soql {
 
 pub mod sosl {
     use tree_sitter_language::LanguageFn;
-    extern "C" {
+    unsafe extern "C" {
         fn tree_sitter_sosl() -> *const ();
     }
 
@@ -103,7 +103,7 @@ pub mod sosl {
 
 pub mod sflog {
     use tree_sitter_language::LanguageFn;
-    extern "C" {
+    unsafe extern "C" {
         fn tree_sitter_sflog() -> *const ();
     }
 

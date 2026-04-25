@@ -1,46 +1,81 @@
-const Parser = require("web-tree-sitter");
-const fs = require("fs");
+import Parser from "web-tree-sitter";
 
-function getApexParser() {
-  return getParser(__dirname + "/tree-sitter-apex.wasm");
-}
-function getSoqlParser() {
-  return getParser(__dirname + "/tree-sitter-soql.wasm");
-}
-function getSoslParser() {
-  return getParser(__dirname + "/tree-sitter-sosl.wasm");
-}
-function getSflogParser() {
-  return getParser(__dirname + "/tree-sitter-sflog.wasm");
+const isNode =
+  typeof process !== "undefined" && process.versions?.node != null;
+
+/**
+ * Load a WASM file as an ArrayBuffer.
+ * In Node.js the file is read from disk; in the browser it is fetched.
+ *
+ * @param {string} filename - bare filename, e.g. "tree-sitter-apex.wasm"
+ * @param {string | URL | BufferSource} [wasmInput] - override: a path, URL, or
+ *   already-loaded buffer. When provided, `filename` is ignored.
+ * @returns {Promise<ArrayBuffer | Uint8Array | string | URL>}
+ */
+async function resolveWasm(filename, wasmInput) {
+  if (wasmInput != null) {
+    // Caller supplied their own source — pass it straight through.
+    return wasmInput;
+  }
+
+  if (isNode) {
+    const { readFile } = await import("fs/promises");
+    const { fileURLToPath } = await import("url");
+    const filePath = fileURLToPath(new URL(`./${filename}`, import.meta.url));
+    return readFile(filePath);
+  }
+
+  // Browser: fetch relative to this module's URL.
+  const url = new URL(`./${filename}`, import.meta.url);
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+  }
+  return response.arrayBuffer();
 }
 
 /**
- * @param {string} wasmLangFile
+ * @param {string} filename
+ * @param {string | URL | BufferSource} [wasmInput]
  * @returns {Promise<Parser>}
  */
-async function getParser(wasmLangFile) {
-  return new Promise(async (resolve, reject) => {
-    await Parser.init();
-    // make loadable on NodeJS to enable testing, should be smarter later
-    const parser = new Parser();
-    fs.readFile(wasmLangFile, async (err, data) => {
-      if (err) {
-        reject(err);
-      }
-      try {
-        const lang = await Parser.Language.load(data);
-        parser.setLanguage(lang);
-        resolve(parser);
-      } catch (err2) {
-        reject(err2);
-      }
-    });
-  });
+async function getParser(filename, wasmInput) {
+  await Parser.init();
+  const parser = new Parser();
+  const wasm = await resolveWasm(filename, wasmInput);
+  const lang = await Parser.Language.load(wasm);
+  parser.setLanguage(lang);
+  return parser;
 }
 
-module.exports = {
-  getApexParser,
-  getSoqlParser,
-  getSoslParser,
-  getSflogParser,
-};
+/**
+ * @param {string | URL | BufferSource} [wasmInput]
+ * @returns {Promise<Parser>}
+ */
+export function getApexParser(wasmInput) {
+  return getParser("tree-sitter-apex.wasm", wasmInput);
+}
+
+/**
+ * @param {string | URL | BufferSource} [wasmInput]
+ * @returns {Promise<Parser>}
+ */
+export function getSoqlParser(wasmInput) {
+  return getParser("tree-sitter-soql.wasm", wasmInput);
+}
+
+/**
+ * @param {string | URL | BufferSource} [wasmInput]
+ * @returns {Promise<Parser>}
+ */
+export function getSoslParser(wasmInput) {
+  return getParser("tree-sitter-sosl.wasm", wasmInput);
+}
+
+/**
+ * @param {string | URL | BufferSource} [wasmInput]
+ * @returns {Promise<Parser>}
+ */
+export function getSflogParser(wasmInput) {
+  return getParser("tree-sitter-sflog.wasm", wasmInput);
+}

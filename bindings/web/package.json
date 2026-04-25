@@ -1,7 +1,14 @@
 {
   "name": "web-tree-sitter-sfapex",
-  "version": "2.4.1",
-  "description": "tree-sitter-sfapex WASM",
+  "version": "3.0.0",
+  "description": "tree-sitter-sfapex WASM — works in Node.js and the browser",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    }
+  },
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -10,6 +17,6 @@
   "author": "Anthony Heber",
   "license": "MIT",
   "dependencies": {
-    "web-tree-sitter": "^0.24.0"
+    "web-tree-sitter": "^0.26.8"
   }
 }

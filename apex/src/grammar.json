@@ -5816,7 +5816,7 @@
             },
             {
               "type": "PATTERN",
-              "value": "[^\\n]*"
+              "value": "[^\\r\\n]*"
             }
           ]
         }
@@ -10553,5 +10553,6 @@
     "_simple_type",
     "_unannotated_type",
     "comment"
-  ]
+  ],
+  "reserved": {}
 }

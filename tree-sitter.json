@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "version": "2.3.0",
+    "version": "3.0.0",
     "license": "MIT",
     "description": "A tree-sitter grammer for Salesforce's Apex, SOQL, SOSL, and SFLog",
     "authors": [

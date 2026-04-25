@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-sfapex",
-  "version": "2.4.1",
+  "version": "3.0.0",
   "description": "A tree-sitter grammer for Salesforce's Apex, SOQL, and SOSL",
   "homepage": "https://github.com/aheber/tree-sitter-sfapex",
   "bugs": {
@@ -15,7 +15,7 @@
     "url": "https://github.com/aheber/tree-sitter-sfapex.git"
   },
   "dependencies": {
-    "node-addon-api": "^7.1.0",
+    "node-addon-api": "^8.7.0",
     "node-gyp-build": "^4.8.0"
   },
   "peerDependencies": {
@@ -28,8 +28,8 @@
   },
   "devDependencies": {
     "prebuildify": "^6.0.1",
-    "tree-sitter-cli": "^0.24.0",
-    "web-tree-sitter": "^0.24.0"
+    "tree-sitter-cli": "^0.26.8",
+    "web-tree-sitter": "^0.26.8"
   },
   "main": "bindings/node",
   "scripts": {

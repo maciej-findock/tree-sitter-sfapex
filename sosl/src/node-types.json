@@ -366,6 +366,7 @@
   {
     "type": "formatting_comment",
     "named": true,
+    "extra": true,
     "fields": {}
   },
   {
