@@ -1,7 +1,7 @@
 public class Me {
 // <- keyword
 //     ^ keyword
-//           ^ class
+//           ^ class.declaration
 //              ^ punctuation
     {
 //  ^ punctuation
@@ -13,7 +13,7 @@ public class Me {
 //              ^ punctuation
             Integer i = 1;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -27,7 +27,7 @@ public class Me {
 //             ^ punctuation
             Integer i = 1;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -40,7 +40,7 @@ public class Me {
 //               ^ punctuation
             Integer i = 1;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -51,7 +51,7 @@ public class Me {
 //             ^ punctuation
             Integer j = 2;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -65,7 +65,7 @@ public class Me {
 //             ^ punctuation
             Integer i = 1;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -73,7 +73,7 @@ public class Me {
 //      ^ keyword
             Integer j = 2;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -85,7 +85,7 @@ public class Me {
 //             ^ punctuation
             Integer i = 1;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -97,7 +97,7 @@ public class Me {
 //                   ^ punctuation
             Integer l = 3;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -105,7 +105,7 @@ public class Me {
 //      ^ keyword
             Integer j = 2;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -119,7 +119,7 @@ public class Me {
 
             Integer i = 1;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -134,7 +134,7 @@ public class Me {
 
             Integer l = 3;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -145,7 +145,7 @@ public class Me {
 
             Integer j = 2;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -158,7 +158,7 @@ public class Me {
 
             Integer i = 1;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -179,7 +179,7 @@ public class Me {
 
             Integer i = 1;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
@@ -190,15 +190,15 @@ public class Me {
 //      ^ keyword
 //         ^ punctuation
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ number
 //                       ^ punctuation
-//                         ^ variable
+//                         ^ variable.declaration // incorrect
 //                           ^ operator
 //                             ^ number
 //                              ^ punctuation
-//                                ^ variable
+//                                ^ variable.declaration // incorrect
 //                                 ^^ operator
 //                                   ^ punctuation
 //                                    ^ punctuation
@@ -207,7 +207,7 @@ public class Me {
 //                ^ punctuation
 //                 ^ method
 //                      ^ punctuation
-//                       ^ variable
+//                       ^ variable.declaration // incorrect
 //                        ^ punctuation
         }
 //      ^ punctuation
@@ -216,7 +216,7 @@ public class Me {
 //      ^ keyword
 //         ^ punctuation
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ punctuation
 //                      ^ variable
 //                          ^ punctuation

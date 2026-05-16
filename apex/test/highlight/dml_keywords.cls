@@ -3,7 +3,7 @@ private virtual with sharing class Me {
 //      ^ keyword
 //              ^^^^^^^^^^^^ keyword
 //                           ^ keyword
-//                                 ^ class
+//                                 ^ class.declaration
 //                                    ^ punctuation
     {
 //  ^ punctuation

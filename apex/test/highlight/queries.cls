@@ -1,7 +1,7 @@
 public class Me {
 // <- keyword
 //     ^ keyword
-//           ^ class
+//           ^ class.declaration
 //              ^ punctuation
      {
 //   ^ punctuation
@@ -10,7 +10,7 @@ public class Me {
 //            ^ punctuation
 //             ^ type
 //                    ^ punctuation
-//                      ^ variable
+//                      ^ variable.declaration
 //                           ^ operator
           [SELECT Id FROM Account WHERE Name = :('x' + 'xx')];
 //        ^ punctuation
@@ -35,7 +35,7 @@ public class Me {
 //            ^ punctuation
 //             ^ type
 //                    ^ punctuation
-//                      ^ variable
+//                      ^ variable.declaration
 //                           ^ operator
 //                             ^ punctuation
 
@@ -70,7 +70,7 @@ public class Me {
 
           String name = [SELECT Name FROM Account
 //        ^ type
-//               ^ variable
+//               ^ variable.declaration
 //                    ^ operator
 //                      ^ punctuation
 //                       ^ keyword
@@ -95,7 +95,7 @@ public class Me {
 
           Integer cnt = [SELECT COUNT() FROM Contact ALL ROWS];
 //        ^ type
-//                ^ variable
+//                ^ variable.declaration
 //                    ^ operator
 //                      ^ punctuation
 //                       ^ keyword
@@ -110,7 +110,7 @@ public class Me {
 
           String a = 'A';
 //        ^ type
-//               ^ variable
+//               ^ variable.declaration
 //                 ^ operator
 //                   ^ string
 //                      ^ punctuation
@@ -120,7 +120,7 @@ public class Me {
 //            ^ punctuation
 //             ^ type
 //                    ^ punctuation
-//                      ^ variable
+//                      ^ variable.declaration
 //                           ^ operator
     [SELECT Id FROM Account WHERE Name = :'N'+a+'M'+'E' AND Name = 'NOPE'];
 //  ^ punctuation
@@ -134,7 +134,7 @@ public class Me {
 //                                       ^ punctuation
 //                                        ^ string
 //                                           ^ operator
-//                                            ^ variable
+//                                            ^ variable.declaration // incorrect
 //                                             ^ operator
 //                                              ^ string
 //                                                 ^ operator
@@ -150,7 +150,7 @@ public class Me {
 //        ^ keyword
 //           ^ punctuation
 //            ^ type
-//                    ^ variable
+//                    ^ variable.declaration
 //                      ^ punctuation
 //                        ^ punctuation
 //                         ^ keyword
@@ -166,7 +166,7 @@ public class Me {
 //                   ^ punctuation
 //                    ^ method
 //                         ^ punctuation
-//                          ^ variable
+//                          ^ variable.declaration // incorrect
 //                           ^ punctuation
 //                            ^ punctuation
           }
@@ -179,7 +179,7 @@ public class Me {
 //                ^ punctuation
 //                 ^ type
 //                        ^ punctuation
-//                          ^ variable
+//                          ^ variable.declaration
 //                               ^ punctuation
 //                                 ^ punctuation
 //                                  ^ keyword
@@ -194,9 +194,9 @@ public class Me {
 //             ^ keyword
 //                ^ punctuation
 //                 ^ type
-//                         ^ variable
+//                         ^ variable.declaration
 //                           ^ punctuation
-//                             ^ variable
+//                             ^ variable.declaration // incorrect
 //                                 ^ punctuation
 //                                  ^ punctuation
                     System.debug(a);
@@ -204,7 +204,7 @@ public class Me {
 //                        ^ punctuation
 //                         ^ method
 //                              ^ punctuation
-//                               ^ variable
+//                               ^ variable.declaration // incorrect
 //                                ^ punctuation
 //                                 ^ punctuation
                }
@@ -220,7 +220,7 @@ public class Me {
 //                  ^ type
 //                         ^ punctuation
 //                          ^ punctuation
-//                            ^ variable
+//                            ^ variable.declaration
 //                                ^ operator
 
                [FIND :myString1 IN ALL FIELDS

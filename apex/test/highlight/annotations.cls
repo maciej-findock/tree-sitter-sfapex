@@ -1,5 +1,5 @@
 @Annotation(param1=false, param2='hello')
-// <- operator
+// <- punctuation
 // ^ decorator
 //         ^ punctuation
 //          ^ variable
@@ -14,11 +14,11 @@
 public class Me {{
 // <- keyword
 //     ^ keyword
-//           ^ class
+//           ^ class.declaration
 //              ^ punctuation
 //               ^ punctuation
     @InvocableVariable(required=true label='Old User')
-//  ^ operator
+//  ^ punctuation
 //   ^ decorator
 //                    ^ punctuation
 //                     ^ variable
@@ -32,12 +32,12 @@ public class Me {{
     public Id oldUserId;// TODO: this isn't a local variable declaration, it should be a field declaration
 //  ^ keyword
 //         ^ type
-//            ^ variable
+//            ^ variable.declaration
   }
 //^ punctuation
 
   @Annotation('this is a test of \' strings')
-//^ operator
+//^ punctuation
 // ^ decorator
 //           ^ punctuation
 //            ^ string
@@ -46,7 +46,7 @@ public class Me {{
   public class Me {
 // ^ keyword
 //       ^ keyword
-//             ^ class
+//             ^ class.declaration
 //                ^ punctuation
 
   }

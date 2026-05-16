@@ -1,7 +1,7 @@
 public class Me extends You {
 // <- keyword
 //     ^ keyword
-//           ^ class
+//           ^ class.declaration
 //              ^ keyword
 //                      ^ class
 //                          ^ punctuation
@@ -9,7 +9,7 @@ public class Me extends You {
   private String world;
 //^ keyword
 //        ^ type
-//               ^ property
+//               ^ property.declaration
 
   public Me() {
 //^ keyword
@@ -31,7 +31,7 @@ public class Me extends You {
 //        ^ class
 //          ^ punctuation
 //           ^ type
-//                  ^ variable
+//                  ^ parameter.declaration
 //                       ^ punctuation
 //                        ^ punctuation
     super(hello);
@@ -44,7 +44,7 @@ public class Me extends You {
     this.world = hello;
 //  ^ variable.defaultLibrary
 //      ^ punctuation
-//       ^ property
+//       ^ property.declaration // incorrect
 //             ^ operator
 //               ^ variable
   }

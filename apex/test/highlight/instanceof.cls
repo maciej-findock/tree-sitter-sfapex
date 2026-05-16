@@ -1,13 +1,13 @@
 public class Me {
 // <- keyword
 //     ^ keyword
-//           ^ class
+//           ^ class.declaration
 //              ^ punctuation
     {
 //  ^ punctuation
         SObject a = new Account();
 //      ^ type
-//              ^ variable
+//              ^ variable.declaration
 //                ^ operator
 //                  ^ keyword
 //                      ^ type
@@ -17,19 +17,19 @@ public class Me {
         if(a instanceof Account) {
 //      ^ keyword
 //        ^ punctuation
-//         ^ variable
+//         ^ variable.declaration // incorrect
 //           ^ keyword
 //                      ^ type
 //                             ^ punctuation
 //                               ^ punctuation
             Account p = (Account)a;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                    ^ operator
 //                      ^ punctuation
 //                       ^ type
 //                              ^ punctuation
-//                               ^ variable
+//                               ^ variable.declaration // incorrect
 //                                ^ punctuation
         } else {
 //      ^ punctuation

@@ -1,13 +1,13 @@
 public class Me {
 // <- keyword
 //     ^ keyword
-//           ^ class
+//           ^ class.declaration
 //              ^ punctuation
     {
 //  ^ punctuation
         Integer i = 0;
 //      ^ type
-//              ^ variable
+//              ^ variable.declaration
 //                ^ operator
 //                  ^ number
 //                   ^ punctuation
@@ -15,7 +15,7 @@ public class Me {
         switch on i {
 //      ^ keyword
 //             ^ keyword
-//                ^ variable
+//                ^ variable.declaration // incorrect
 //                  ^ punctuation
             when 2, 3, 4 {
 //          ^ keyword
@@ -60,7 +60,7 @@ public class Me {
 //                          ^ punctuation
 //                           ^ string
 //                                      ^ operator
-//                                        ^ variable
+//                                        ^ variable.declaration // incorrect
 //                                         ^ punctuation
 //                                          ^ punctuation
             }
@@ -73,7 +73,7 @@ public class Me {
 //             ^ keyword
 //                ^ method
 //                           ^ punctuation
-//                            ^ variable
+//                            ^ variable.declaration // incorrect
 //                             ^ punctuation
 //                               ^ punctuation
             when 2 {
@@ -109,7 +109,7 @@ public class Me {
 
         SObject s = new Account();
 //      ^ type
-//              ^ variable
+//              ^ variable.declaration
 //                ^ operator
 //                  ^ keyword
 //                      ^ type
@@ -120,12 +120,12 @@ public class Me {
         switch on s {
 //      ^ keyword
 //             ^ keyword
-//                ^ variable
+//                ^ variable.declaration
 //                  ^ punctuation
             when Account a {
 //          ^ keyword
 //               ^ type
-//                       ^ variable
+//                       ^ variable.declaration
 //                         ^ punctuation
                 System.debug('account ' + a);
 //              ^ type
@@ -142,7 +142,7 @@ public class Me {
             when Contact c {
 //          ^ keyword
 //               ^ type
-//                       ^ variable
+//                       ^ variable.declaration
 //                         ^ punctuation
                 System.debug('contact ' + c);
 //              ^ type

@@ -1,28 +1,28 @@
 public class Me {
 // <- keyword
 //     ^ keyword
-//           ^ class
+//           ^ class.declaration
 //              ^ punctuation
     public void method1(String param1, Integer param2){
 //  ^ keyword
 //         ^ type.defaultLibrary
-//              ^ method
+//              ^ method.declaration
 //                     ^ punctuation
 //                      ^ type
-//                             ^ parameter
+//                             ^ parameter.declaration
 //                                   ^ punctuation
 //                                     ^ type
-//                                             ^ parameter
+//                                             ^ parameter.declaration
 //                                                   ^ punctuation
 //                                                    ^ punctuation
 
         param1 = '1';
-//      ^ parameter
+//      ^ parameter.declaration // incorrect
 //             ^ operator
 //               ^ string
 //                  ^ punctuation
         param2 = 2;
-//      ^ parameter
+//      ^ parameter.declaration // incorrect
 //             ^ operator
 //               ^ number
 //                ^ punctuation
@@ -31,33 +31,33 @@ public class Me {
     global Integer method1(Integer param1){
 //  ^ keyword
 //         ^ type
-//                 ^ method
+//                 ^ method.declaration
 //                        ^ punctuation
 //                         ^ type
-//                                 ^ parameter
+//                                 ^ parameter.declaration
 //                                       ^ punctuation
 //                                        ^ punctuation
         return param1;
 //      ^ keyword
-//             ^ parameter
+//             ^ parameter.declaration
 //                   ^ punctuation
     }
 //  ^ punctuation
     public void helloWorld(final Integer i){
 //  ^ keyword
 //         ^ type.defaultLibrary
-//              ^ method
+//              ^ method.declaration
 //                        ^ punctuation
 //                         ^ keyword
 //                               ^ type
-//                                       ^ parameter
+//                                       ^ parameter.declaration
 //                                        ^ punctuation
 //                                         ^ punctuation
         System.debug(i);
 //      ^ type
 //            ^ punctuation
 //                  ^ punctuation
-//                   ^ parameter
+//                   ^ parameter.declaration // incorrect
 //                    ^ punctuation
 //                     ^ punctuation
     }
@@ -66,7 +66,7 @@ public class Me {
 //  ^ keyword
 //         ^ keyword
 //                    ^ type.defaultLibrary
-//                         ^ method
+//                         ^ method.declaration
 //                                   ^ punctuation
 //                                    ^ punctuation
 //                                     ^ punctuation

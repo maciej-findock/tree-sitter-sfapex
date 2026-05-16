@@ -1,13 +1,13 @@
 public class Me {
 // <- keyword
 //     ^ keyword
-//           ^ class
+//           ^ class.declaration
 //              ^ punctuation
    {
 // ^ punctuation
         Account a = new Account(Name='Acme');
 //      ^ type
-//              ^ variable
+//              ^ variable.declaration
 //                ^ operator
 //                  ^ keyword
 //                      ^ type
@@ -22,21 +22,21 @@ public class Me {
 //          ^ punctuation
             insert a;
 //          ^ function.defaultLibrary
-//                 ^ variable
+//                 ^ variable.declaration // incorrect
 //                  ^ punctuation
         } catch(DmlException e) {
 //      ^ punctuation
 //        ^ keyword
 //             ^ punctuation
 //              ^ type
-//                           ^ variable
+//                           ^ parameter.declaration
 //                            ^ punctuation
 //                              ^ punctuation
             // Process exception here
 //          ^^^^^^^^^^ comment
             Boolean failed = true;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                         ^ operator
 //                           ^ variable.readonly.defaultLibrary
 //                               ^ punctuation
@@ -45,13 +45,13 @@ public class Me {
 //        ^ keyword
 //             ^ punctuation
 //              ^ type
-//                        ^ variable
+//                        ^ parameter.declaration
 //                         ^ punctuation
 //                           ^ punctuation
             // Process exception here
             Boolean failed = true;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                         ^ operator
 //                           ^ variable.readonly.defaultLibrary
 //                               ^ punctuation
@@ -61,7 +61,7 @@ public class Me {
 //                ^ punctuation
             Boolean finallyRan = true;
 //          ^ type
-//                  ^ variable
+//                  ^ variable.declaration
 //                             ^ operator
 //                               ^ variable.readonly.defaultLibrary
 //                                   ^ punctuation

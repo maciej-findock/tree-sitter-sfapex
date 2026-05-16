@@ -1,7 +1,7 @@
 public class Me {
 // <- keyword
 //     ^ keyword
-//           ^ class
+//           ^ class.declaration
 //              ^ punctuation
   {
 //^ punctuation
@@ -10,7 +10,7 @@ public class Me {
 //      ^ punctuation
 //       ^ type
 //              ^ punctuation
-//                ^ variable
+//                ^ variable.declaration
 //                     ^ operator
 //                       ^ keyword
 //                           ^ type
@@ -26,7 +26,7 @@ public class Me {
 //      ^ punctuation
 //       ^ type
 //              ^ punctuation
-//                ^ variable
+//                ^ variable.declaration
 //                     ^ operator
 //                       ^ keyword
 //                           ^ type
@@ -47,7 +47,7 @@ public class Me {
 //      ^ punctuation
 //       ^ type
 //              ^ punctuation
-//                ^ variable
+//                ^ variable.declaration
 //                     ^ operator
 //                       ^ keyword
 //                           ^ type
@@ -61,7 +61,7 @@ public class Me {
 //      ^ punctuation
 //       ^ type
 //              ^ punctuation
-//                ^ variable
+//                ^ variable.declaration
 //                     ^ operator
 //                       ^ keyword
 //                           ^ type
@@ -69,7 +69,7 @@ public class Me {
 //  ^ type
 //         ^ punctuation
 //          ^ punctuation
-//            ^ variable
+//            ^ variable.declaration
 //                 ^ operator
 //                   ^ keyword
 //                       ^ type
@@ -83,7 +83,7 @@ public class Me {
 //     ^ punctuation
 //      ^ type
 //             ^ punctuation
-//               ^ variable
+//               ^ variable.declaration
 //                    ^ operator
 //                      ^ keyword
 //                          ^ type
@@ -99,7 +99,7 @@ public class Me {
 //     ^ punctuation
 //      ^ type
 //             ^ punctuation
-//               ^ variable
+//               ^ variable.declaration
 //                    ^ operator
 //                      ^ keyword
 //                          ^ type
@@ -122,7 +122,7 @@ public class Me {
 //            ^ punctuation
 //             ^ type
 //                    ^ punctuation
-//                      ^ variable
+//                      ^ variable.declaration
 //                                ^ operator
 //                                  ^ keyword
 //                                      ^ type
@@ -141,7 +141,7 @@ public class Me {
 //            ^ punctuation
 //             ^ type
 //                    ^ punctuation
-//                      ^ variable
+//                      ^ variable.declaration
 //                                ^ operator
 //                                  ^ keyword
 //                                      ^ type
@@ -162,21 +162,21 @@ public class Me {
 //                                                                                     ^ punctuation
     Integer i,j,k;
 //  ^ type
-//          ^ variable
+//          ^ variable.declaration
 //           ^ punctuation
-//            ^ variable
+//            ^ variable.declaration
 //             ^ punctuation
-//              ^ variable
+//              ^ variable.declaration
 //               punctuation
     Integer i = 0, j, k = 1;
 //  ^ type
-//          ^ variable
+//          ^ variable.declaration
 //            ^ operator
 //              ^ number
 //               ^ punctuation
-//                 ^ variable
+//                 ^ variable.declaration
 //                  ^ punctuation
-//                    ^ variable
+//                    ^ variable.declaration
 //                      ^ operator
 //                        ^ number
 //                         ^ punctuation
@@ -184,14 +184,14 @@ public class Me {
 
     String str = 'hello\'world';
 //  ^ type
-//          ^ variable
+//          ^ variable.declaration
 //             ^ operator
 //                ^ string
 
 
     String str2 = '''this is a multi-line string''';
 //  ^ type
-//          ^ variable
+//          ^ variable.declaration
 //              ^ operator
 //                    ^ string
   }

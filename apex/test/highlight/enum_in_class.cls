@@ -1,30 +1,30 @@
 public class Me {
 // <- keyword
 //     ^ keyword
-//           ^ class
+//           ^ class.declaration
 //              ^ punctuation
    public enum Season {WINTER, SPRING, SUMMER, FALL}
 // ^ keyword
 //        ^ keyword
-//             ^ enum
+//             ^ enum.declaration
 //                    ^ punctuation
-//                     ^ enumMember
+//                     ^ enumMember.declaration
 //                           ^ punctuation
-//                             ^ enumMember
+//                             ^ enumMember.declaration
 //                                   ^ punctuation
-//                                     ^ enumMember
+//                                     ^ enumMember.declaration
 //                                           ^ punctuation
-//                                             ^ enumMember
+//                                             ^ enumMember.declaration
 //                                                 ^ punctuation
   {
 //^ punctuation
     Season s = Season.SPRING;
 //  ^ type
-//         ^ variable
+//         ^ variable.declaration
 //           ^ operator
-//             ^ enum
+//             ^ enum.declaration
 //                   ^ punctuation
-//                    ^ enumMember
+//                    ^ enumMember.declaration
 //                          ^ punctuation
 
 

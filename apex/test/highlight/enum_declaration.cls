@@ -1,9 +1,9 @@
 public enum MyEnumClass { X, Y }
 // <- keyword
 //     ^ keyword
-//          ^ enum
+//          ^ enum.declaration
 //                      ^ punctuation
-//                        ^ enumMember
+//                        ^ enumMember.declaration
 //                         ^ punctuation
-//                           ^ enumMember
+//                           ^ enumMember.declaration
 //                             ^ punctuation

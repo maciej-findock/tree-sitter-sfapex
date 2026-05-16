@@ -5,6 +5,8 @@ SELECT Account.Name, (SELECT Contact.LastName FROM Account.Contacts) FROM Accoun
 ///                  ^ punctuation
 ///                   ^^^^^^ keyword
 ///                                           ^^^^ keyword
-///                                                ^^^^^^^^^^^^^^^^ type
+///                                                ^ type
+///                                                       ^ punctuation
+///                                                        ^ type
 ///                                                                ^ punctuation
 ///                                                                       ^^^^^^^ type

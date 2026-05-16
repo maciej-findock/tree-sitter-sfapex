@@ -2,11 +2,11 @@ public virtual interface MyInterface {
 // <- keyword
 //     ^ keyword
 //             ^ keyword
-//                       ^ interface
+//                       ^ interface.declaration
 //                                   ^ punctuation
   void myMethod();
 //^ type.defaultLibrary
-//     ^ method
+//     ^ method.declaration
 //             ^ punctuation
 //              ^ punctuation
 //               ^ punctuation

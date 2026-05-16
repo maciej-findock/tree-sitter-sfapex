@@ -8,12 +8,15 @@
   "}"
   "?"
   ";"
+  "@"
 ] @punctuation
+
+(identifier) @variable
 
 ;; Methods
 
 (method_declaration
-  name: (identifier) @method)
+  name: (identifier) @method.declaration)
 (method_declaration
   type: (type_identifier) @type)
 
@@ -32,29 +35,28 @@
 (annotation
   name: (identifier) @decorator)
 
-"@" @operator
-
 (annotation_key_value
   (identifier) @variable)
-
-
-;; Types
 
 ;; because itendifying it when declared doesn't carry to use
 ;; leans on the convention that "screaming snake case" is a const
 ((identifier) @variable.readonly
   (#match? @variable.readonly "^_*[A-Z][A-Z\\d_]+$"))
 
+(enum_declaration
+  name: (identifier) @enum.declaration)
+(enum_body
+  (enum_constant
+    name: (identifier) @enumMember.declaration))
+
+;; Types
+
 (interface_declaration
-  name: (identifier) @interface)
+  name: (identifier) @interface.declaration)
 (class_declaration
-  name: (identifier) @class)
+  name: (identifier) @class.declaration)
 (class_declaration
   (superclass) @class)
-(enum_declaration
-  name: (identifier) @enum)
-(enum_constant
-  name: (identifier) @enumMember)
 
 (interfaces
   (type_list
@@ -63,12 +65,11 @@
 (local_variable_declaration
   (type_identifier) @type )
 
-( expression_statement (_ (identifier)) @variable)
-
 (type_arguments "<" @punctuation)
 (type_arguments ">" @punctuation)
 
-; (identifier) @variable
+;; (identifier) @variable
+(variable_declarator (identifier) @variable.declaration)
 
 ((field_access
   object: (identifier) @type)) ;; don't know what type of thing it is
@@ -92,23 +93,19 @@
   type: (type_identifier) @type)
 
 (formal_parameter
-  type: (type_identifier) @type
-  (identifier) @variable)
+  type: (type_identifier) @type)
 
-(method_declaration
-  (formal_parameters
-    (formal_parameter
-      name: (identifier) @parameter)))
+(formal_parameter
+  name: (identifier) @parameter.declaration)
 
 (enhanced_for_statement
-  type: (type_identifier) @type
-  name: (identifier) @variable )
+  type: (type_identifier) @type)
 
 (enhanced_for_statement
   value: (identifier) @variable)
 
 (enhanced_for_statement
-  name: (identifier) @variable)
+  name: (identifier) @variable.declaration)
 
 (object_creation_expression
   type: (type_identifier) @type)
@@ -121,10 +118,6 @@
 
 (return_statement
   (identifier) @variable)
-
-(local_variable_declaration
-  (variable_declarator
-    name: (identifier) @variable ))
 
 (for_statement
   condition: (binary_expression
@@ -163,10 +156,10 @@
 
 (when_sobject_type
   (type_identifier) @type
-  (identifier) @variable )
+  (identifier) @variable.declaration )
 
 (trigger_declaration
-  name: (identifier) @type
+  name: (identifier) @type.declaration
   object: (identifier) @type
   (trigger_event) @keyword
   ("," (trigger_event) @keyword)*)
@@ -216,12 +209,12 @@
 ; Variables
 
 (field_declaration (variable_declarator
-  (identifier) @property))
+  (identifier) @property.declaration))
 
 (field_declaration
   (modifiers (modifier [(final) (static)])(modifier [(final) (static)]))
   (variable_declarator
-    name: (identifier) @variable.readonly))
+    name: (identifier) @variable.declaration.readonly))
 
 (this) @variable.defaultLibrary
 
@@ -298,3 +291,5 @@
 
 (scoped_type_identifier
   (type_identifier) @type)
+
+;; (identifier) @variable

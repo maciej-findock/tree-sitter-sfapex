@@ -1,6 +1,6 @@
 trigger myAccountTrigger on Account (
 // <- keyword
-//      ^ type
+//      ^ type.declaration
 //                       ^ keyword
 //                          ^ type
 //                                  ^ punctuation
@@ -28,7 +28,7 @@ trigger myAccountTrigger on Account (
 //                  ^ punctuation
     Integer i = 1;
 //  ^ type
-//          ^ variable
+//          ^ variable.declaration
 //            ^ operator
 //              ^ number
 //               ^ punctuation

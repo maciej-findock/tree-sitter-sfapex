@@ -1,68 +1,68 @@
 public class TestObject2 {
 // ^ keyword
 //     ^ keyword
-//           ^ class
+//           ^ class.declaration
 //                       ^ punctuation
 
 
    public Integer test1;
 // ^ keyword
 //        ^ type
-//                ^ property
+//                ^ property.declaration
 //                     ^ punctuation
    private Integer test1;
 // ^ keyword
 //         ^ type
-//                 ^ property
+//                 ^ property.declaration
 //                      ^ punctuation
    protected Integer test1;
 // ^ keyword
 //           ^ type
-//                   ^ property
+//                   ^ property.declaration
 //                        ^ punctuation
    global Integer test1;
 // ^ keyword
 //        ^ type
-//                ^ property
+//                ^ property.declaration
 //                     ^ punctuation
    Integer test1;
 // ^ type
-//         ^ property
+//         ^ property.declaration
 //              ^ punctuation
 
 
    final Integer test1;
 // ^ keyword
 //       ^ type
-//               ^ property
+//               ^ property.declaration
 //                    ^ punctuation
    static Integer test1;
 // ^ keyword
 //        ^ type
-//                ^ property
+//                ^ property.declaration
 //                     ^ punctuation
    transient Integer test1;
 // ^ keyword
 //           ^ type
-//                   ^ property
+//                   ^ property.declaration
 //                        ^ punctuation
    static transient Integer test1;
 // ^ keyword
 //        ^ keyword
 //                  ^ type
-//                          ^ property
+//                          ^ property.declaration
 //                               ^ punctuation
    final static Integer test1;
 // ^ keyword
 //       ^ keyword
 //              ^ type
-//                      ^ variable.readonly
+//                      ^ variable.declaration.readonly
 //                           ^ punctuation
 
    public integer X { private get; set; }
 // ^ keyword
 //        ^ type
-//                ^ property
+//                ^ property.declaration
 //                  ^ punctuation
 //                    ^ keyword
 //                            ^ keyword
@@ -73,7 +73,7 @@ public class TestObject2 {
    global integer Y { get; public set; }
 // ^ keyword
 //        ^ type
-//                ^ property
+//                ^ property.declaration
 //                  ^ punctuation
 //                    ^ keyword
 //                       ^ punctuation
@@ -85,7 +85,7 @@ public class TestObject2 {
    public integer Z { get; protected set; }
 // ^ keyword
 //        ^ type
-//                ^ property
+//                ^ property.declaration
 //                  ^ punctuation
 //                    ^ keyword
 //                       ^ punctuation
@@ -97,19 +97,19 @@ public class TestObject2 {
    public integer prop {
 // ^ keyword
 //        ^ type
-//                ^ property
+//                ^ property.declaration
 //                     ^ punctuation
       get { return prop; }
 //    ^ keyword
 //        ^ punctuation
 //          ^ keyword
-//                 ^ property
+//                 ^ property.declaration // incorrect
 //                     ^ punctuation
 //                       ^ punctuation
       set { prop = value; }
 //    ^ keyword
 //        ^ punctuation
-//          ^ property
+//          ^ property.declaration // incorrect
 //               ^ operator
 //                 ^ variable
 //                      ^ punctuation
@@ -120,13 +120,13 @@ public class TestObject2 {
    public integer prop {
 // ^ keyword
 //        ^ type
-//                ^ property
+//                ^ property.declaration
 //                     ^
       get { return prop; }
 //    ^ keyword
 //        ^ punctuation
 //          ^ keyword
-//                 ^ property
+//                 ^ property.declaration // incorrect
 //                     ^ punctuation
 //                       ^ punctuation
       set;
@@ -140,7 +140,7 @@ public class TestObject2 {
 //         ^ keyword
 //                ^ keyword
 //                      ^ type
-//                              ^ variable.readonly
+//                              ^ variable.declaration.readonly
 //                                        ^ operator
 //                                          ^ number
 //                                            ^ punctuation
@@ -149,7 +149,7 @@ public class TestObject2 {
 // ^ punctuation
        Integer i = TestConst;
 //     ^ type
-//             ^ variable
+//             ^ variable.declaration
 //               ^ operator
 //                 ! variable.readonly
    }

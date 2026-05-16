@@ -1,7 +1,7 @@
 global class Me implements Interface1, Interface2 {}
 // <- keyword
 //     ^ keyword
-//           ^ class
+//           ^ class.declaration
 //              ^ keyword
 //                         ^ interface
 //                                   ^ punctuation

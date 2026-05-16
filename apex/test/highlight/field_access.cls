@@ -1,7 +1,7 @@
 public class Me {{
 // <- keyword
 //     ^ keyword
-//           ^ class
+//           ^ class.declaration
 //              ^ punctuation
 //               ^ punctuation
      AccountTriggerhandler.seenRecordsMap = new Map<String, Set<Id>>();
